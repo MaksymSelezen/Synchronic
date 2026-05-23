@@ -34,7 +34,7 @@
               height="28"
               aria-hidden="true"
             >
-              <use href="%BASE_URL%images/sprite.svg#icon-search"></use>
+              <use href="%BASE_URL%icons/sprite.svg#icon-search"></use>
             </svg>
           </button>
         </div>
@@ -92,7 +92,7 @@
               aria-label="Previous games"
             >
               <svg class="section-actions__icon" width="16" height="16">
-                <use href="%BASE_URL%images/sprite.svg#icon-left"></use>
+                <use href="%BASE_URL%icons/sprite.svg#icon-left"></use>
               </svg>
             </button>
 
@@ -103,7 +103,7 @@
               aria-label="Next games"
             >
               <svg class="section-actions__icon" width="16" height="16">
-                <use href="%BASE_URL%images/sprite.svg#icon-right"></use>
+                <use href="%BASE_URL%icons/sprite.svg#icon-right"></use>
               </svg>
             </button>
 
@@ -134,8 +134,8 @@
                 data-scroll-direction="prev"
                 aria-label="Previous top games"
               >
-                <svg class="section-actions__icon" width="16" height="16">
-                  <use href="%BASE_URL%images/sprite.svg#icon-left"></use>
+                <svg class="section-actions__icon" width="8" height="5">
+                  <use href="%BASE_URL%icons/sprite.svg#icon-left"></use>
                 </svg>
               </button>
 
@@ -145,8 +145,8 @@
                 data-scroll-direction="next"
                 aria-label="Next top games"
               >
-                <svg class="section-actions__icon" width="16" height="16">
-                  <use href="%BASE_URL%images/sprite.svg#icon-right"></use>
+                <svg class="section-actions__icon" width="8" height="5">
+                  <use href="%BASE_URL%icons/sprite.svg#icon-right"></use>
                 </svg>
               </button>
 
@@ -176,7 +176,7 @@
                 aria-label="Previous mini games"
               >
                 <svg class="section-actions__icon" width="16" height="16">
-                  <use href="%BASE_URL%images/sprite.svg#icon-left"></use>
+                  <use href="%BASE_URL%icons/sprite.svg#icon-left"></use>
                 </svg>
               </button>
 
@@ -187,7 +187,7 @@
                 aria-label="Next mini games"
               >
                 <svg class="section-actions__icon" width="16" height="16">
-                  <use href="%BASE_URL%images/sprite.svg#icon-right"></use>
+                  <use href="%BASE_URL%icons/sprite.svg#icon-right"></use>
                 </svg>
               </button>
 
@@ -205,6 +205,95 @@
         </section>
       </div>
     </section>
+
+    <!--! ========== SEARCH MODAL ========== -->
+    <div class="search-modal js-search-modal" aria-hidden="true">
+      <div class="search-modal__overlay js-search-close"></div>
+
+      <div
+        class="search-modal__content"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search games"
+      >
+        <div class="search-modal__header">
+          <h2 class="search-modal__title">Search</h2>
+
+          <button
+            class="search-modal__close js-search-close"
+            type="button"
+            aria-label="Close search"
+          >
+            <svg
+              class="search-modal__close-icon"
+              width="14"
+              height="14"
+              aria-hidden="true"
+            >
+              <use href="%BASE_URL%icons/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="search-modal__body">
+          <p class="search-modal__subtitle">
+            Enter the game title in the search below
+          </p>
+
+          <form class="search-modal__form js-search-form">
+            <label class="search-modal__label" for="search-games">
+              helper label
+            </label>
+
+            <div class="search-modal__field">
+              <button
+                class="search-modal__submit"
+                type="submit"
+                aria-label="Search games"
+              >
+                <svg
+                  class="search-modal__field-icon"
+                  width="14"
+                  height="14"
+                  aria-hidden="true"
+                >
+                  <use href="%BASE_URL%icons/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+
+              <input
+                class="search-modal__input js-search-input"
+                id="search-games"
+                type="search"
+                placeholder="Search"
+                autocomplete="off"
+              />
+
+              <button
+                class="search-modal__clear js-search-clear"
+                type="button"
+                aria-label="Clear search"
+              >
+                <svg
+                  class="search-modal__clear-icon"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <use href="%BASE_URL%icons/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <div class="search-modal__results-block">
+            <h3 class="search-modal__results-title">Top games</h3>
+
+            <div class="search-modal__results js-search-results"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

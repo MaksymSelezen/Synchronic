@@ -9,7 +9,7 @@ export const games = [
   },
   {
     id: "parrots-gold",
-    title: "Parrots Gold",
+    title: "Parrot`s Gold",
     image: `${baseUrl}images/games/parrots_gold@1x.webp`,
     image2x: `${baseUrl}images/games/parrots_gold@2x.webp`,
   },

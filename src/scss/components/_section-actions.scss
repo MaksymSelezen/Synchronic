@@ -1,0 +1,43 @@
+@use "../utils/media" as media;
+
+.section-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include media.max-width(xs) {
+    margin-right: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 24px;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-card);
+    color: var(--color-white);
+
+    @include media.max-width(xs) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 8px;
+    height: 8px;
+    fill: currentColor;
+  }
+
+  &__show-all {
+    max-width: 64px;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-card);
+    color: var(--color-white);
+    font-size: 12px;
+    line-height: 133%;
+    font-weight: var(--fw-medium);
+  }
+}

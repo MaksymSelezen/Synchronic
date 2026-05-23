@@ -1,0 +1,98 @@
+@use "../utils/media" as media;
+
+.games {
+  &__container {
+    padding-top: 16px;
+    padding-bottom: 40px;
+
+    @include media.max-width(xs) {
+      padding-top: 24px;
+      padding-right: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    gap: 17.5px;
+  }
+
+  &__tab {
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: var(--fw-bold);
+  }
+
+  &__tab_active {
+    max-width: 112px;
+    padding: 8px 27px;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-md);
+  }
+}
+
+.games-section {
+  & + & {
+    margin-top: 20px;
+
+    @include media.max-width(xs) {
+      margin-top: 28px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: var(--fw-bold);
+    margin-left: 4px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &_mobile-only {
+    display: none;
+  }
+
+  @include media.max-width(xs) {
+    &__list[data-category="top"] {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(2, auto);
+      grid-auto-columns: max-content;
+      column-gap: 8px;
+      row-gap: 16px;
+    }
+
+    &_mobile-only {
+      display: block;
+    }
+  }
+}
