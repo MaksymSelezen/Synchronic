@@ -1,0 +1,25 @@
+@use "../utils/media" as media;
+
+.winners {
+  padding-top: 16px;
+  padding-inline: var(--container-padding);
+
+  @include media.max-width(sm) {
+    padding-inline: var(--container-padding-mobile);
+    padding-right: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchronic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/scss/main.scss" />
+  </head>
+
+  <body>
+    <!--! ========== HEADER ========== -->
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__inner">
+          <a class="header__logo" href="./index.html">Logo</a>
+
+          <button
+            class="header__search js-search-open"
+            type="button"
+            aria-label="Open search"
+          >
+            <svg
+              class="header__search-icon"
+              width="28"
+              height="28"
+              aria-hidden="true"
+            >
+              <use href="%BASE_URL%images/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--! ========== HERO ========== -->
+    <section class="hero">
+      <picture class="hero__picture">
+        <source
+          media="(max-width: 576px)"
+          srcset="
+            /src/assets/images/hero/hero_375@1x.webp 1x,
+            /src/assets/images/hero/hero_375@2x.webp 2x
+          "
+          type="image/webp"
+        />
+
+        <img
+          class="hero__image"
+          src="/src/assets/images/hero/hero_1440@1x.webp"
+          srcset="
+            /src/assets/images/hero/hero_1440@1x.webp 1x,
+            /src/assets/images/hero/hero_1440@2x.webp 2x
+          "
+          alt="2000 euro prize fund in daily battle"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </picture>
+    </section>
+
+    <!--! ========== WINNERS ========== -->
+    <section class="winners">
+      <div class="winners__list js-winners-list"></div>
+    </section>
+
+    <!--! ========== GAMES ========== -->
+    <section class="games">
+      <div class="container games__container">
+        <div class="games__top">
+          <div class="games__tabs">
+            <button class="games__tab games__tab_active" type="button">
+              Recent
+            </button>
+
+            <button class="games__tab" type="button">Favourite</button>
+          </div>
+
+          <div class="section-actions" data-scroll-controls="recent">
+            <button
+              class="section-actions__button"
+              type="button"
+              data-scroll-direction="prev"
+              aria-label="Previous games"
+            >
+              <svg class="section-actions__icon" width="16" height="16">
+                <use href="%BASE_URL%images/sprite.svg#icon-left"></use>
+              </svg>
+            </button>
+
+            <button
+              class="section-actions__button"
+              type="button"
+              data-scroll-direction="next"
+              aria-label="Next games"
+            >
+              <svg class="section-actions__icon" width="16" height="16">
+                <use href="%BASE_URL%images/sprite.svg#icon-right"></use>
+              </svg>
+            </button>
+
+            <button class="section-actions__show-all" type="button">
+              Show all
+            </button>
+          </div>
+        </div>
+
+        <!--* ========== RECENT GAMES ========== -->
+        <div class="games-section">
+          <div
+            class="games-section__list js-games-list"
+            data-category="recent"
+            data-scroll-list="recent"
+          ></div>
+        </div>
+
+        <!--* ========== TOP GAMES ========== -->
+        <section class="games-section">
+          <div class="games-section__header">
+            <h2 class="games-section__title">Top games</h2>
+
+            <div class="section-actions" data-scroll-controls="top">
+              <button
+                class="section-actions__button"
+                type="button"
+                data-scroll-direction="prev"
+                aria-label="Previous top games"
+              >
+                <svg class="section-actions__icon" width="16" height="16">
+                  <use href="%BASE_URL%images/sprite.svg#icon-left"></use>
+                </svg>
+              </button>
+
+              <button
+                class="section-actions__button"
+                type="button"
+                data-scroll-direction="next"
+                aria-label="Next top games"
+              >
+                <svg class="section-actions__icon" width="16" height="16">
+                  <use href="%BASE_URL%images/sprite.svg#icon-right"></use>
+                </svg>
+              </button>
+
+              <button class="section-actions__show-all" type="button">
+                Show all
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="games-section__list js-games-list"
+            data-category="top"
+            data-scroll-list="top"
+          ></div>
+        </section>
+
+        <!--* ========== MINI GAMES ========== -->
+        <section class="games-section games-section_mobile-only">
+          <div class="games-section__header">
+            <h2 class="games-section__title">Mini games</h2>
+
+            <div class="section-actions" data-scroll-controls="mini">
+              <button
+                class="section-actions__button"
+                type="button"
+                data-scroll-direction="prev"
+                aria-label="Previous mini games"
+              >
+                <svg class="section-actions__icon" width="16" height="16">
+                  <use href="%BASE_URL%images/sprite.svg#icon-left"></use>
+                </svg>
+              </button>
+
+              <button
+                class="section-actions__button"
+                type="button"
+                data-scroll-direction="next"
+                aria-label="Next mini games"
+              >
+                <svg class="section-actions__icon" width="16" height="16">
+                  <use href="%BASE_URL%images/sprite.svg#icon-right"></use>
+                </svg>
+              </button>
+
+              <button class="section-actions__show-all" type="button">
+                Show all
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="games-section__list js-games-list"
+            data-category="mini"
+            data-scroll-list="mini"
+          ></div>
+        </section>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+@use "../utils/media" as media;
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+
+  @include media.max-width(sm) {
+    padding: 0 var(--container-padding-mobile);
+  }
+}

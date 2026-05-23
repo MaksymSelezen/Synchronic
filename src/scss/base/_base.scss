@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  font-family: var(--font-main);
+  font-weight: var(--fw-regular);
+  color: var(--color-white);
+  background-color: var(--color-bg);
+}
+
+body.is-lock {
+  overflow: hidden;
+}

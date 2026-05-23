@@ -1,0 +1,14 @@
+@use "./base/reset";
+@use "./base/variables";
+@use "./base/base";
+@use "./utils/media";
+@use "./base/layout";
+
+@use "./components/winner-card";
+@use "./components/game-card";
+@use "./components/section-actions";
+
+@use "./sections/header";
+@use "./sections/hero";
+@use "./sections/winners";
+@use "./sections/games";

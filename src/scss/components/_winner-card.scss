@@ -1,0 +1,52 @@
+.winner-card {
+  flex: 0 0 168px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 168px;
+  height: 64px;
+  padding: 8px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-card);
+  overflow: hidden;
+
+  &__image {
+    flex: 0 0 68px;
+    display: block;
+    width: 68px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.43;
+    font-weight: var(--fw-medium);
+    color: var(--color-accent);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__amount {
+    font-size: 14px;
+    line-height: 1.43;
+    font-weight: var(--fw-medium);
+    color: var(--color-success);
+    white-space: nowrap;
+  }
+
+  &__user {
+    font-size: 12px;
+    line-height: 1.33;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

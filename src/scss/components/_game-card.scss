@@ -1,0 +1,40 @@
+.game-card {
+  &__media {
+  }
+
+  &__image {
+  }
+
+  &__overlay {
+  }
+
+  &:hover &__overlay,
+  &:focus-within &__overlay {
+  }
+
+  &__button {
+  }
+
+  &__button_play {
+  }
+
+  &__button_demo {
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    color: var(--color-gray);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  &__title {
+    color: currentColor;
+  }
+}
