@@ -8,7 +8,6 @@
     flex: 0 0 160px;
     width: 160px;
     cursor: pointer;
-    pointer-events: auto;
   }
 
   &__media {
@@ -25,7 +24,6 @@
   }
 
   &__image {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -86,7 +84,6 @@
   &__button_demo {
     left: 50%;
     bottom: 18px;
-    padding: 0;
     font-size: 14px;
     line-height: 143%;
     transform: translateX(-50%);

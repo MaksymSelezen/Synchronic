@@ -1,45 +1,29 @@
 const getScrollAmount = (list) => {
   const card = list.querySelector(".game-card");
+  if (!card) return list.clientWidth;
 
-  if (!card) {
-    return list.clientWidth;
-  }
-
-  const listStyles = window.getComputedStyle(list);
-  const gap = parseFloat(listStyles.columnGap || listStyles.gap) || 0;
-
+  const styles = window.getComputedStyle(list);
+  const gap = parseFloat(styles.columnGap || styles.gap) || 0;
   return card.offsetWidth + gap;
 };
 
 export const initGamesScroll = () => {
-  const controls = document.querySelectorAll("[data-scroll-controls]");
+  document.querySelectorAll("[data-scroll-controls]").forEach((controls) => {
+    const list = document.querySelector(
+      `[data-scroll-list="${controls.dataset.scrollControls}"]`,
+    );
+    if (!list) return;
 
-  if (!controls.length) {
-    return;
-  }
-
-  controls.forEach((control) => {
-    const target = control.dataset.scrollControls;
-    const list = document.querySelector(`[data-scroll-list="${target}"]`);
-
-    if (!list) {
-      return;
-    }
-
-    control.addEventListener("click", (event) => {
+    controls.addEventListener("click", (event) => {
       const button = event.target.closest("[data-scroll-direction]");
+      if (!button) return;
 
-      if (!button) {
-        return;
-      }
+      const offset =
+        button.dataset.scrollDirection === "next"
+          ? getScrollAmount(list)
+          : -getScrollAmount(list);
 
-      const direction = button.dataset.scrollDirection;
-      const scrollAmount = getScrollAmount(list);
-
-      list.scrollBy({
-        left: direction === "next" ? scrollAmount : -scrollAmount,
-        behavior: "smooth",
-      });
+      list.scrollBy({ left: offset, behavior: "smooth" });
     });
   });
 };
